@@ -25,6 +25,13 @@
       <version>0.9.60</version>
     </dependency>
 
+    <!--Base64-->
+    <dependency>
+      <groupId>commons-codec</groupId>
+      <artifactId>commons-codec</artifactId>
+      <version>1.15</version>
+    </dependency>
+
   </dependencies>
 
   <build>
