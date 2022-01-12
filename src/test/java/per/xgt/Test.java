@@ -2,6 +2,7 @@ package per.xgt;
 
 import per.xgt.utils.AESUtil;
 import per.xgt.utils.NumberFormatUtil;
+import per.xgt.utils.RandomUtil;
 import per.xgt.utils.SyslogUtil;
 
 import java.io.UnsupportedEncodingException;
@@ -73,6 +74,15 @@ public class Test {
         // 解密
         String DeString = AESUtil.Decrypt(enString, cKey);
         System.out.println("解密后的字串是：" + DeString);
+    }
+
+    @org.junit.Test
+    public void getSecureRandomIntTest(){
+        System.out.println(RandomUtil.getSecureRandomInt(100));
+        System.out.println(RandomUtil.getSecureRandomInt(100,200));
+        for (int i = 0; i < 100; i++) {
+            System.out.println(RandomUtil.RandomVerificationCode(4));
+        }
     }
     
 }
